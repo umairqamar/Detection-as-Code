@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "8400629e-79a9-4737-b387-5db940ab2367",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Scanner PoC for CVE-2019-0708 RDP RCE Vuln",
+      "description": "Detects the use of a scanner by zerosum0x0 that discovers targets vulnerable to  CVE-2019-0708 RDP RCE aka BlueKeep",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4625\\\" AND TargetUserName:\\\"AAAAAAA\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

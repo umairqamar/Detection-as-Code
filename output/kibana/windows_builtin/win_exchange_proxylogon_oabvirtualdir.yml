@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "550d3350-bb8a-4ff3-9533-2ba533f4a1c0",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: ProxyLogon MSExchange OabVirtualDirectory",
+      "description": "Detects specific patterns found after a successful ProxyLogon exploitation in relation to a Commandlet invocation of Set-OabVirtualDirectory",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"((:\\\"OabVirtualDirectory\\\" AND :\\\"\\\\ \\\\-ExternalUrl\\\\ \\\") AND \\\\*.keyword:(*eval\\\\(request* OR *http\\\\:\\\\/\\\\/f\\\\/<script* OR *\\\\\\\"unsafe\\\\\\\"\\\\};* OR *function\\\\ Page_Load\\\\(\\\\)*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

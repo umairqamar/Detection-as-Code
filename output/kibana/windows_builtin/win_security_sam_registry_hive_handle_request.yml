@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "f8748f2c-89dc-4d95-afb0-5a2dfdbad332",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: SAM Registry Hive Handle Request",
+      "description": "Detects handles requested to SAM registry hive",
+      "hits": 0,
+      "columns": [
+        "winlog.ComputerName",
+        "SubjectDomainName",
+        "winlog.event_data.SubjectUserName",
+        "winlog.event_data.ProcessName",
+        "winlog.event_data.ObjectName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4656\\\" AND winlog.event_data.ObjectType:\\\"Key\\\" AND winlog.event_data.ObjectName.keyword:*\\\\\\\\SAM)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

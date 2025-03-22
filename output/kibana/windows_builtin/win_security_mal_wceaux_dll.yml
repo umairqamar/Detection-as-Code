@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1de68c67-af5c-4097-9c85-fe5578e09e67",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: WCE wceaux.dll Access",
+      "description": "Detects wceaux.dll access while WCE pass-the-hash remote command execution on source host",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:(\\\"4656\\\" OR \\\"4658\\\" OR \\\"4660\\\" OR \\\"4663\\\") AND winlog.event_data.ObjectName.keyword:*\\\\\\\\wceaux.dll)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

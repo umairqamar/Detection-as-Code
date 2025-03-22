@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "45eb2ae2-9aa2-4c3a-99a5-6e5077655466",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious Computer Account Name Change CVE-2021-42287",
+      "description": "Detects the renaming of an existing computer account to a account name that doesn't contain a $ symbol as seen in attacks against CVE-2021-42287",
+      "hits": 0,
+      "columns": [
+        "winlog.event_id",
+        "winlog.event_data.SubjectUserName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:\\\"4781\\\" AND OldTargetUserName.keyword:*$*) AND (NOT (NewTargetUserName.keyword:*$*)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

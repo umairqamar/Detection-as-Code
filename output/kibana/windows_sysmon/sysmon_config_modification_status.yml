@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1f2b5353-573f-4880-8e33-7d04dcf97744",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Sysmon Configuration Modification",
+      "description": "Detects when an attacker tries to hide from Sysmon by disabling or stopping it",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"((State:\\\"Stopped\\\" OR \\\"Sysmon\\\\ config\\\\ state\\\\ changed\\\") AND (NOT (State:\\\"Started\\\")))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

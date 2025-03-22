@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "12e6d621-194f-4f59-90cc-1959e21e69f7",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Register new Logon Process by Rubeus",
+      "description": "Detects potential use of Rubeus via registered new trusted logon process",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4611\\\" AND winlog.event_data.LogonProcessName:\\\"User32LogonProcesss\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

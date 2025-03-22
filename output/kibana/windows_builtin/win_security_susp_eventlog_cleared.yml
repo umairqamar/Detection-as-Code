@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "d99b79d2-0a6f-4f46-ad8b-260b6e17f982",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Security Eventlog Cleared",
+      "description": "One of the Windows Eventlogs has been cleared. e.g. caused by \"wevtutil cl\" command execution",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:\\\"517\\\" AND winlog.provider_name:\\\"Security\\\") OR (winlog.event_id:\\\"1102\\\" AND winlog.provider_name:\\\"Microsoft\\\\-Windows\\\\-Eventlog\\\")))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

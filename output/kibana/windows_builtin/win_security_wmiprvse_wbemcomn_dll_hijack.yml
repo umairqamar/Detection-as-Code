@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "f6c68d5f-e101-4b86-8c84-7d96851fd65c",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: T1047 Wmiprvse Wbemcomn DLL Hijack",
+      "description": "Detects a threat actor creating a file named `wbemcomn.dll` in the `C:\\Windows\\System32\\wbem\\` directory over the network for a WMI DLL Hijack scenario.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:\\\"5145\\\" AND winlog.event_data.RelativeTargetName.keyword:*\\\\\\\\wbem\\\\\\\\wbemcomn.dll) AND (NOT (winlog.event_data.SubjectUserName.keyword:*$)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "91c945bc-2ad1-4799-a591-4d00198a1215",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious Access to Sensitive File Extensions",
+      "description": "Detects known sensitive file extensions accessed on a network share",
+      "hits": 0,
+      "columns": [
+        "winlog.ComputerName",
+        "SubjectDomainName",
+        "winlog.event_data.SubjectUserName",
+        "winlog.event_data.RelativeTargetName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"5145\\\" AND winlog.event_data.RelativeTargetName.keyword:(*.pst OR *.ost OR *.msg OR *.nst OR *.oab OR *.edb OR *.nsf OR *.bak OR *.dmp OR *.kirbi OR *\\\\\\\\groups.xml OR *.rdp))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

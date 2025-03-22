@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "9db37458-4df2-46a5-95ab-307e7f29e675",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Exchange Set OabVirtualDirectory ExternalUrl Property",
+      "description": "Rule to detect an adversary setting OabVirtualDirectory External URL property to a script in Exchange Management log",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(:\\\"Set\\\\-OabVirtualDirectory\\\" AND :\\\"ExternalUrl\\\" AND :\\\"Page_Load\\\" AND :\\\"script\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

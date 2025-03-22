@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "311b6ce2-7890-4383-a8c2-663a9f6b43cd",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Enabled User Right in AD to Control User Objects",
+      "description": "Detects scenario where if a user is assigned the SeEnableDelegationPrivilege right in Active Directory it would allow control of other AD user objects.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4704\\\" AND winlog.event_data.PrivilegeList.keyword:*SeEnableDelegationPrivilege*)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "74ad4314-482e-4c3e-b237-3f7ed3b9ca8d",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Operation Wocao Activity - Security",
+      "description": "Detects activity mentioned in Operation Wocao report",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4799\\\" AND TargetUserName.keyword:Administr* AND winlog.event_data.CallerProcessName.keyword:*\\\\\\\\checkadmin.exe)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1321dc4e-a1fe-481d-a016-52c45f0c8b4f",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Windows Defender Exclusions Added",
+      "description": "Detects the Setting of Windows Defender Exclusions",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-Windows\\\\ Defender\\\\/Operational\\\" AND winlog.event_id:\\\"5007\\\" AND winlog.event_data.NewValue.keyword:*\\\\\\\\Microsoft\\\\\\\\Windows\\\\ Defender\\\\\\\\Exclusions*)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

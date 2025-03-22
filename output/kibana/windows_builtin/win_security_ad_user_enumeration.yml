@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "ab6bffca-beff-4baa-af11-6733f296d57a",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: AD User Enumeration",
+      "description": "Detects access to a domain user from a non-machine account",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:\\\"4662\\\" AND winlog.event_data.ObjectType.keyword:*bf967aba\\\\-0de6\\\\-11d0\\\\-a285\\\\-00aa003049e2*) AND (NOT (winlog.event_data.SubjectUserName.keyword:*$ OR winlog.event_data.SubjectUserName.keyword:MSOL_*)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

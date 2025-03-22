@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "39a94fd1-8c9a-4ff6-bf22-c058762f8014",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: DPAPI Domain Master Key Backup Attempt",
+      "description": "Detects anyone attempting a backup for the DPAPI Master Key. This events gets generated at the source and not the Domain Controller.",
+      "hits": 0,
+      "columns": [
+        "winlog.ComputerName",
+        "SubjectDomainName",
+        "winlog.event_data.SubjectUserName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4692\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "8ac03a65-6c84-4116-acad-dc1558ff7a77",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Sysmon Configuration Change",
+      "description": "Detects a Sysmon configuration change, which could be the result of a legitimate reconfiguration or someone trying manipulate the configuration",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-Sysmon\\\\/Operational\\\" AND winlog.event_id:\\\"16\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

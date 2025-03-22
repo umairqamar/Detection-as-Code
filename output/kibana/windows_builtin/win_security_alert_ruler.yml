@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "24549159-ac1b-479c-8175-d42aea947cae",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Hacktool Ruler",
+      "description": "This events that are generated when using the hacktool Ruler by Sensepost",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:\\\"4776\\\" AND winlog.event_data.Workstation:\\\"RULER\\\") OR (winlog.event_id:(\\\"4624\\\" OR \\\"4625\\\") AND winlog.event_data.WorkstationName:\\\"RULER\\\")))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

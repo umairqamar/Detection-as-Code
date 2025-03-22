@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1d2ab8ac-1a01-423b-9c39-001510eae8e8",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Azure AD Health Service Agents Registry Keys Access",
+      "description": "This detection uses Windows security events to detect suspicious access attempts to the registry key values and sub-keys of Azure AD Health service agents (e.g AD FS).\nInformation from AD Health service agents can be used to potentially abuse some of the features provided by those services in the cloud (e.g. Federation).\nThis detection requires an access control entry (ACE) on the system access control list (SACL) of the following securable object: HKLM:\\SOFTWARE\\Microsoft\\ADHealthAgent.\nMake sure you set the SACL to propagate to its sub-keys.\n",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:(\\\"4656\\\" OR \\\"4663\\\") AND winlog.event_data.ObjectType:\\\"Key\\\" AND winlog.event_data.ObjectName:\\\"\\\\\\\\REGISTRY\\\\\\\\MACHINE\\\\\\\\SOFTWARE\\\\\\\\Microsoft\\\\\\\\ADHealthAgent\\\") AND (NOT (winlog.event_data.ProcessName.keyword:(*Microsoft.Identity.Health.Adfs.DiagnosticsAgent.exe* OR *Microsoft.Identity.Health.Adfs.InsightsService.exe* OR *Microsoft.Identity.Health.Adfs.MonitoringAgent.Startup.exe* OR *Microsoft.Identity.Health.Adfs.PshSurrogate.exe* OR *Microsoft.Identity.Health.Common.Clients.ResourceMonitor.exe*))))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

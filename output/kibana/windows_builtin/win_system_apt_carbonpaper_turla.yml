@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1df8b3da-b0ac-4d8a-b7c7-6cb7c24160e4",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Turla Service Install",
+      "description": "This method detects a service install of malicious services mentioned in Carbon Paper - Turla report by ESET",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.provider_name:\\\"Service\\\\ Control\\\\ Manager\\\" AND winlog.event_id:\\\"7045\\\" AND winlog.event_data.ServiceName:(\\\"srservice\\\" OR \\\"ipvpn\\\" OR \\\"hkmsvc\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

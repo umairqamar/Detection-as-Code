@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "d7a95147-145f-4678-b85d-d1ff4a3bb3f6",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: CobaltStrike Service Installations - Security",
+      "description": "Detects known malicious service installs that appear in cases in which a Cobalt Strike beacon elevates privileges or lateral movement",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4697\\\" AND ((winlog.event_data.ServiceFileName.keyword:*ADMIN$* AND winlog.event_data.ServiceFileName.keyword:*.exe*) OR (winlog.event_data.ServiceFileName.keyword:*%COMSPEC%* AND winlog.event_data.ServiceFileName.keyword:*start* AND winlog.event_data.ServiceFileName.keyword:*powershell*) OR winlog.event_data.ServiceFileName.keyword:*powershell\\\\ \\\\-nop\\\\ \\\\-w\\\\ hidden\\\\ \\\\-encodedcommand* OR (winlog.event_data.ServiceFileName.keyword:*SUVYIChOZXctT2JqZWN0IE5ldC5XZWJjbGllbnQpLkRvd25sb2FkU3RyaW5nKCdodHRwOi8vMTI3LjAuMC4xO* OR winlog.event_data.ServiceFileName.keyword:*lFWCAoTmV3LU9iamVjdCBOZXQuV2ViY2xpZW50KS5Eb3dubG9hZFN0cmluZygnaHR0cDovLzEyNy4wLjAuMT* OR winlog.event_data.ServiceFileName.keyword:*JRVggKE5ldy1PYmplY3QgTmV0LldlYmNsaWVudCkuRG93bmxvYWRTdHJpbmcoJ2h0dHA6Ly8xMjcuMC4wLjE6*)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

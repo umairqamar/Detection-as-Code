@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "f6de9536-0441-4b3f-a646-f4e00f300ffd",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Weak Encryption Enabled and Kerberoast",
+      "description": "Detects scenario where weak encryption is enabled for a user profile which could be used for hash/password cracking.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4738\\\" AND (((NewUacValue.keyword:(*8??? OR *9??? OR *A??? OR *B??? OR *C??? OR *D??? OR *E??? OR *F???) AND (NOT (OldUacValue.keyword:(*8??? OR *9??? OR *A??? OR *B??? OR *C??? OR *D??? OR *E??? OR *F???)))) OR (NewUacValue.keyword:(*1???? OR *3???? OR *5???? OR *7???? OR *9???? OR *B???? OR *D???? OR *F????) AND (NOT (OldUacValue.keyword:(*1???? OR *3???? OR *5???? OR *7???? OR *9???? OR *B???? OR *D???? OR *F????))))) OR (NewUacValue.keyword:(*8?? OR *9?? OR *A?? OR *B?? OR *C?? OR *D?? OR *E?? OR *F??) AND (NOT (OldUacValue.keyword:(*8?? OR *9?? OR *A?? OR *B?? OR *C?? OR *D?? OR *E?? OR *F??))))))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

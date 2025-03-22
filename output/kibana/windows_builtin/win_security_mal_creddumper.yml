@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "f0d1feba-4344-4ca9-8121-a6c97bd6df52",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Credential Dumping Tools Service Execution - Security",
+      "description": "Detects well-known credential dumping tools execution via service execution events",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4697\\\" AND winlog.event_data.ServiceFileName.keyword:(*fgexec* OR *dumpsvc* OR *cachedump* OR *mimidrv* OR *gsecdump* OR *servpw* OR *pwdump*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

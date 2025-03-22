@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "72124974-a68b-4366-b990-d30e0b2a190d",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Metasploit SMB Authentication",
+      "description": "Alerts on Metasploit host's authentications on the domain.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:(\\\"4625\\\" OR \\\"4624\\\") AND winlog.event_data.LogonType:\\\"3\\\" AND winlog.event_data.AuthenticationPackageName:\\\"NTLM\\\" AND winlog.event_data.WorkstationName.keyword:/[A-Za-z0-9]{16}/) OR (NOT _exists_:winlog.event_data.ProcessName AND winlog.event_id:\\\"4776\\\" AND winlog.event_data.Workstation.keyword:/[A-Za-z0-9]{16}/)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

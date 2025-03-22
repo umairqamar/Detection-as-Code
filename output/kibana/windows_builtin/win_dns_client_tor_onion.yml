@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "8384bd26-bde6-4da9-8e5d-4174a7a47ca2",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Query Tor Onion Address - DNS Client",
+      "description": "Detects DNS resolution of an .onion address related to Tor routing networks",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog_channel:\\\"Microsoft\\\\-Windows\\\\-DNS\\\\ Client\\\\ Events\\\\/Operational\\\" AND winlog.event_id:\\\"3008\\\" AND winlog.event_data.QueryName.keyword:*.onion*)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

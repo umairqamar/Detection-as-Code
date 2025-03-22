@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "b55d23e5-6821-44ff-8a6e-67218891e49f",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: HybridConnectionManager Service Running",
+      "description": "Rule to detect the Hybrid Connection Manager service running on an endpoint.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.event_id:(\\\"40300\\\" OR \\\"40301\\\" OR \\\"40302\\\") AND \\\\*.keyword:(*HybridConnection* OR *sb\\\\:\\\\/\\\\/* OR *servicebus.windows.net* OR *HybridConnectionManage*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

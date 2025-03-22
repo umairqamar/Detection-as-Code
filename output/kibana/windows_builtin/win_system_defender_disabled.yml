@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "6c0a7755-6d31-44fa-80e1-133e57752680",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Windows Defender Threat Detection Disabled - Service",
+      "description": "Detects the \"Windows Defender Threat Protection\" service has been disabled",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.event_id:\\\"7036\\\" AND winlog.provider_name:\\\"Service\\\\ Control\\\\ Manager\\\" AND param1:(\\\"Windows\\\\ Defender\\\\ Antivirus\\\\ Service\\\" OR \\\"Service\\\\ antivirus\\\\ Microsoft\\\\ Defender\\\") AND param2:\\\"stopped\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

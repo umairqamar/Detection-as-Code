@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "aa1697b7-d611-4f9a-9cb2-5125b4ccfd5c",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Password Dumper Activity on LSASS",
+      "description": "Detects process handle on LSASS process with certain access mask and object type SAM_DOMAIN",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4656\\\" AND winlog.event_data.ProcessName.keyword:*\\\\\\\\lsass.exe AND winlog.event_data.AccessMask:\\\"0x705\\\" AND winlog.event_data.ObjectType:\\\"SAM_DOMAIN\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

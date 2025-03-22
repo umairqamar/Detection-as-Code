@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "7b687634-ab20-11ea-bb37-0242ac130002",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Windows Pcap Drivers",
+      "description": "Detects Windows Pcap driver installation based on a list of associated .sys files.",
+      "hits": 0,
+      "columns": [
+        "winlog.event_id",
+        "winlog.event_data.ServiceFileName",
+        "Account_Name",
+        "Computer_Name",
+        "Originating_Computer",
+        "winlog.event_data.ServiceName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.event_id:\\\"4697\\\" AND winlog.event_data.ServiceFileName.keyword:(*pcap* OR *npcap* OR *npf* OR *nm3* OR *ndiscap* OR *nmnt* OR *windivert* OR *USBPcap* OR *pktmon*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

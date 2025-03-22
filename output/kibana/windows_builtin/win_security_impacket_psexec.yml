@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "32d56ea1-417f-44ff-822b-882873f5f43b",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Impacket PsExec Execution",
+      "description": "Detects execution of Impacket's psexec.py.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"5145\\\" AND winlog.event_data.ShareName.keyword:\\\\\\\\\\\\\\\\\\\\*\\\\\\\\IPC$ AND winlog.event_data.RelativeTargetName.keyword:(*RemCom_stdin* OR *RemCom_stdout* OR *RemCom_stderr*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

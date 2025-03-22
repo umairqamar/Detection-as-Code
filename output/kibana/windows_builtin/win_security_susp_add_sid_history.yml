@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "2632954e-db1c-49cb-9936-67d1ef1d17d2",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Addition of SID History to Active Directory Object",
+      "description": "An attacker can use the SID history attribute to gain additional privileges.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:(\\\"4765\\\" OR \\\"4766\\\") OR ((winlog.event_id:\\\"4738\\\" AND (NOT (winlog.event_data.SidHistory:(\\\"\\\\-\\\" OR \\\"%%1793\\\")))) AND (NOT (NOT _exists_:winlog.event_data.SidHistory)))))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

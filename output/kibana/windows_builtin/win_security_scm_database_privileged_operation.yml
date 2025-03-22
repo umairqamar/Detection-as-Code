@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "dae8171c-5ec6-4396-b210-8466585b53e9",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: SCM Database Privileged Operation",
+      "description": "Detects non-system users performing privileged operation os the SCM database",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:\\\"4674\\\" AND winlog.event_data.ObjectType:\\\"SC_MANAGER\\\\ OBJECT\\\" AND winlog.event_data.ObjectName:\\\"servicesactive\\\" AND winlog.event_data.PrivilegeList:\\\"SeTakeOwnershipPrivilege\\\") AND (NOT (winlog.event_data.SubjectLogonId:\\\"0x3e4\\\" AND winlog.event_data.ProcessName.keyword:*\\\\:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\services.exe)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "2a926e6a-4b81-4011-8a96-e36cc8c04302",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: PowerShell Scripts Installed as Services - Security",
+      "description": "Detects powershell script installed as a Service",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4697\\\" AND winlog.event_data.ServiceFileName.keyword:(*powershell* OR *pwsh*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

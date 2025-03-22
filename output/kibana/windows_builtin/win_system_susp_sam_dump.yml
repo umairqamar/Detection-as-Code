@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "839dd1e8-eda8-4834-8145-01beeee33acd",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: SAM Dump to AppData",
+      "description": "Detects suspicious SAM dump activity as cause by QuarksPwDump and other password dumpers",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.provider_name:\\\"Microsoft\\\\-Windows\\\\-Kernel\\\\-General\\\" AND winlog.event_id:\\\"16\\\" AND \\\"\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\SAM\\\\-\\\" AND \\\".dmp\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

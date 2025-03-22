@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "7b449a5e-1db5-4dd0-a2dc-4e3a67282538",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Hidden Local User Creation",
+      "description": "Detects the creation of a local hidden user account which should not happen for event ID 4720.",
+      "hits": 0,
+      "columns": [
+        "EventCode",
+        "winlog.event_data.AccountName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4720\\\" AND TargetUserName.keyword:*$)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "18beca67-ab3e-4ee3-ba7a-a46ca8d7d0cc",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Sysmon Channel Reference Deletion",
+      "description": "Potential threat actor tampering with Sysmon manifest and eventually disabling it",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:\\\"4657\\\" AND winlog.event_data.ObjectName.keyword:(*WINEVT\\\\\\\\Publishers\\\\\\\\\\\\{5770385f\\\\-c22a\\\\-43e0\\\\-bf4c\\\\-06f5698ffbd9\\\\}* OR *WINEVT\\\\\\\\Channels\\\\\\\\Microsoft\\\\-Windows\\\\-Sysmon\\\\/Operational*) AND winlog.event_data.ObjectValueName:\\\"Enabled\\\" AND winlog.event_data.NewValue:\\\"0\\\") OR (winlog.event_id:\\\"4663\\\" AND winlog.event_data.ObjectName.keyword:(*WINEVT\\\\\\\\Publishers\\\\\\\\\\\\{5770385f\\\\-c22a\\\\-43e0\\\\-bf4c\\\\-06f5698ffbd9\\\\}* OR *WINEVT\\\\\\\\Channels\\\\\\\\Microsoft\\\\-Windows\\\\-Sysmon\\\\/Operational*) AND winlog.event_data.AccessMask:\\\"65536\\\")))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

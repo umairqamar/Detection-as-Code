@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "9cf01b6c-e723-4841-a868-6d7f8245ca6e",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Group Modification Logging",
+      "description": "Configure systems to issue a log entry and alert when an account is added to or removed from any group assigned administrative privileges.\nSigma detects\nEvent ID 4728 indicates a \u2018Member is added to a Security Group\u2019.\nEvent ID 4729 indicates a \u2018Member is removed from a Security enabled-group\u2019 .\nEvent ID 4730 indicates a \u2018Security Group is deleted\u2019.\nThe case is not applicable for Unix OS.\nSupported OS - Windows 2008 R2 and 7, Windows 2012 R2 and 8.1, Windows 2016 and 10 Windows Server 2019, Windows Server 2000, Windows 2003 and XP.\n",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:(\\\"4728\\\" OR \\\"4729\\\" OR \\\"4730\\\" OR \\\"633\\\" OR \\\"632\\\" OR \\\"634\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

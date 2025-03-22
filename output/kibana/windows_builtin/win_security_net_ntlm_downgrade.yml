@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "d3abac66-f11c-4ed0-8acb-50cc29c97eed",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: NetNTLM Downgrade Attack",
+      "description": "Detects NetNTLM downgrade attack",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4657\\\" AND winlog.event_data.ObjectName.keyword:*\\\\\\\\REGISTRY\\\\\\\\MACHINE\\\\\\\\SYSTEM* AND winlog.event_data.ObjectName.keyword:*ControlSet* AND winlog.event_data.ObjectName.keyword:*\\\\\\\\Control\\\\\\\\Lsa* AND winlog.event_data.ObjectValueName:(\\\"LmCompatibilityLevel\\\" OR \\\"NtlmMinClientSec\\\" OR \\\"RestrictSendingNTLMTraffic\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

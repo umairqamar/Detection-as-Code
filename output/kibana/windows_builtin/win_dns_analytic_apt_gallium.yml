@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "3db10f25-2527-4b79-8d4b-471eb900ee29",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: GALLIUM Artefacts - Builtin",
+      "description": "Detects artefacts associated with activity group GALLIUM - Microsoft Threat Intelligence Center indicators released in December 2019.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.event_id:\\\"257\\\" AND QNAME:(\\\"asyspy256.ddns.net\\\" OR \\\"hotkillmail9sddcc.ddns.net\\\" OR \\\"rosaf112.ddns.net\\\" OR \\\"cvdfhjh1231.myftp.biz\\\" OR \\\"sz2016rose.ddns.net\\\" OR \\\"dffwescwer4325.myftp.biz\\\" OR \\\"cvdfhjh1231.ddns.net\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

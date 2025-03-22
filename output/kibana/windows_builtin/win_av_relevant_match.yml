@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "78bc5783-81d9-4d73-ac97-59f6db4f72a8",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Relevant Anti-Virus Event",
+      "description": "This detection method points out highly relevant Antivirus events",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Application\\\" AND \\\\*.keyword:(*Adfind* OR *ASP\\\\/BackDoor* OR *ATK\\\\/* OR *Backdoor.ASP* OR *Backdoor.Cobalt* OR *Backdoor.JSP* OR *Backdoor.PHP* OR *Blackworm* OR *Brutel* OR *BruteR* OR *Chopper* OR *Cobalt* OR *COBEACON* OR *Cometer* OR *CRYPTES* OR *Cryptor* OR *Destructor* OR *DumpCreds* OR *Exploit.Script.CVE* OR *Filecoder* OR *FastReverseProxy* OR *GrandCrab* OR *HackTool* OR *HKTL.* OR *HKTL\\\\/* OR *HKTL\\\\:* OR *HTool* OR *Impacket* OR *IISExchgSpawnCMD* OR *JSP\\\\/BackDoor* OR *Keylogger* OR *Koadic* OR *Krypt* OR *Lazagne* OR *Locker* OR *Metasploit* OR *Meterpreter* OR *MeteTool* OR *Mimikatz* OR *Mpreter* OR *Nighthawk* OR *Packed.Generic.347* OR *PentestPowerShell* OR *Phobos* OR *PHP\\\\/BackDoor* OR *Potato* OR *PowerSploit* OR *PowerSSH* OR *PshlSpy* OR *PSWTool* OR *PWCrack* OR *PWDump* OR *Ransom* OR *Rozena* OR *Ryzerlo* OR *Sbelt* OR *Seatbelt* OR *SecurityTool* OR *SharpDump* OR *Sliver* OR *Splinter* OR *Swrort* OR *Tescrypt* OR *TeslaCrypt* OR *Valyria* OR *Webshell*) AND (NOT (\\\\*.keyword:(*Keygen* OR *Crack* OR *anti_ransomware_service.exe* OR *cyber\\\\-protect\\\\-service.exe*) OR (winlog.event_data.Level:\\\"4\\\"))))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

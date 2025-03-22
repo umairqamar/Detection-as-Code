@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "0ee4d8a5-4e67-4faf-acfa-62a78457d1f2",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: HybridConnectionManager Service Installation",
+      "description": "Rule to detect the Hybrid Connection Manager service installation.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4697\\\" AND winlog.event_data.ServiceName:\\\"HybridConnectionManager\\\" AND winlog.event_data.ServiceFileName.keyword:*HybridConnectionManager*)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

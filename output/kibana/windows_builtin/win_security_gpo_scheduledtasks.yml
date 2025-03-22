@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "a8f29a7b-b137-4446-80a0-b804272f3da2",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Persistence and Execution at Scale via GPO Scheduled Task",
+      "description": "Detect lateral movement using GPO scheduled task, usually used to deploy ransomware at scale",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"5145\\\" AND winlog.event_data.ShareName.keyword:\\\\\\\\\\\\\\\\\\\\*\\\\\\\\SYSVOL AND winlog.event_data.RelativeTargetName.keyword:*ScheduledTasks.xml AND winlog.event_data.Accesses.keyword:(*WriteData* OR *%%4417*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "4fe151c2-ecf9-4fae-95ae-b88ec9c2fca6",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: MSExchange Transport Agent Installation - Builtin",
+      "description": "Detects the Installation of a Exchange Transport Agent",
+      "hits": 0,
+      "columns": [
+        "AssemblyPath"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"Install\\\\-TransportAgent\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

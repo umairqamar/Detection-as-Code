@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "d00a9a72-2c09-4459-ad03-5e0a23351e36",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious LDAP-Attributes Used",
+      "description": "Detects the usage of particular AttributeLDAPDisplayNames, which are known for data exchange via LDAP by the tool LDAPFragger and are additionally not commonly used in companies.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"5136\\\" AND winlog.event_data.AttributeValue.keyword:* AND winlog.event_data.AttributeLDAPDisplayName:(\\\"primaryInternationalISDNNumber\\\" OR \\\"otherFacsimileTelephoneNumber\\\" OR \\\"primaryTelexNumber\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "cfeed607-6aa4-4bbd-9627-b637deb723c8",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: New or Renamed User Account with '$' in Attribute 'SamAccountName'",
+      "description": "Detects possible bypass EDR and SIEM via abnormal user account name.",
+      "hits": 0,
+      "columns": [
+        "winlog.event_id",
+        "winlog.event_data.SamAccountName",
+        "winlog.event_data.SubjectUserName",
+        "NewTargetUserName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:\\\"4720\\\" AND winlog.event_data.SamAccountName.keyword:*$*) OR (winlog.event_id:\\\"4781\\\" AND NewTargetUserName.keyword:*$*)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "4c54ba8f-73d2-4d40-8890-d9cf1dca3d30",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Invoke-Obfuscation VAR++ LAUNCHER OBFUSCATION - Security",
+      "description": "Detects Obfuscated Powershell via VAR++ LAUNCHER",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4697\\\" AND winlog.event_data.ServiceFileName.keyword:*\\\\&&set* AND winlog.event_data.ServiceFileName.keyword:*cmd* AND winlog.event_data.ServiceFileName.keyword:*\\\\/c* AND winlog.event_data.ServiceFileName.keyword:*\\\\-f* AND winlog.event_data.ServiceFileName.keyword:(*\\\\{0\\\\}* OR *\\\\{1\\\\}* OR *\\\\{2\\\\}* OR *\\\\{3\\\\}* OR *\\\\{4\\\\}* OR *\\\\{5\\\\}*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

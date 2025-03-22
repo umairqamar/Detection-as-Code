@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1b2ae822-6fe1-43ba-aa7c-d1a3b3d1d5f2",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Service Installation with Suspicious Folder Pattern",
+      "description": "Detects service installation with suspicious folder patterns",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND (winlog.provider_name:\\\"Service\\\\ Control\\\\ Manager\\\" AND winlog.event_id:\\\"7045\\\") AND (winlog.event_data.ImagePath.keyword:/[Cc]:\\\\\\\\[Pp]rogram[Dd]ata\\\\\\\\.{1,9}\\\\.exe.*/ OR winlog.event_data.ImagePath.keyword:/[Cc]:\\\\\\\\.{1,9}\\\\.exe.*/))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

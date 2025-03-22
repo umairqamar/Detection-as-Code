@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "ce5678bb-b9aa-4fb5-be4b-e57f686256ad",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Potential Remote Desktop Connection to Non-Domain Host",
+      "description": "Detects logons using NTLM to hosts that are potentially not part of the domain.",
+      "hits": 0,
+      "columns": [
+        "Computer",
+        "winlog.event_data.UserName",
+        "DomainName",
+        "TargetName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-NTLM\\\\/Operational\\\" AND winlog.event_id:\\\"8001\\\" AND TargetName.keyword:TERMSRV*)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

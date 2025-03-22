@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "eca91c7c-9214-47b9-b4c5-cb1d7e4f2350",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious Outbound Kerberos Connection - Security",
+      "description": "Detects suspicious outbound network activity via kerberos default port indicating possible lateral movement or first stage PrivEsc via delegation.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:\\\"5156\\\" AND winlog.event_data.DestPort:\\\"88\\\") AND (NOT ((Application:(\\\"C\\\\:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\lsass.exe\\\" OR \\\"C\\\\:\\\\\\\\Program\\\\ Files\\\\\\\\Google\\\\\\\\Chrome\\\\\\\\Application\\\\\\\\chrome.exe\\\" OR \\\"C\\\\:\\\\\\\\Program\\\\ Files\\\\ \\\\(x86\\\\)\\\\\\\\Google\\\\\\\\Chrome\\\\\\\\Application\\\\\\\\chrome.exe\\\" OR \\\"C\\\\:\\\\\\\\Program\\\\ Files\\\\\\\\Mozilla\\\\ Firefox\\\\\\\\firefox.exe\\\" OR \\\"C\\\\:\\\\\\\\Program\\\\ Files\\\\ \\\\(x86\\\\)\\\\\\\\Mozilla\\\\ Firefox\\\\\\\\firefox.exe\\\")))))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

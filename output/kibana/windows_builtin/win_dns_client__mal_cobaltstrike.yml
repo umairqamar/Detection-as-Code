@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "0d18728b-f5bf-4381-9dcf-915539fff6c2",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious Cobalt Strike DNS Beaconing - DNS Client",
+      "description": "Detects a program that invoked suspicious DNS queries known from Cobalt Strike beacons",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog_channel:\\\"Microsoft\\\\-Windows\\\\-DNS\\\\ Client\\\\ Events\\\\/Operational\\\" AND winlog.event_id:\\\"3008\\\" AND (winlog.event_data.QueryName.keyword:(aaa.stage.* OR post.1*) OR winlog.event_data.QueryName.keyword:*.stage.123456.*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

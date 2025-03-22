@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "c5a178bf-9cfb-4340-b584-e4df39b6a3e7",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Defrag Deactivation - Security",
+      "description": "Detects the deactivation and disabling of the Scheduled defragmentation task as seen by Slingshot APT group",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4701\\\" AND winlog.event_data.TaskName:\\\"\\\\\\\\Microsoft\\\\\\\\Windows\\\\\\\\Defrag\\\\\\\\ScheduledDefrag\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

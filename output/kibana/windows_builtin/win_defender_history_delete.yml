@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "2afe6582-e149-11ea-87d0-0242ac130003",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Windows Defender Malware Detection History Deletion",
+      "description": "Windows Defender logs when the history of detected infections is deleted. Log file will contain the message \"Windows Defender Antivirus has removed history of malware and other potentially unwanted software\".",
+      "hits": 0,
+      "columns": [
+        "winlog.event_id",
+        "winlog.event_data.EventType"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-Windows\\\\ Defender\\\\/Operational\\\" AND winlog.event_id:\\\"1013\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

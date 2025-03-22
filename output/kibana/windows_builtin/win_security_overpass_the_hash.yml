@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "192a0330-c20b-4356-90b6-7b7049ae0b87",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Successful Overpass the Hash Attempt",
+      "description": "Detects successful logon with logon type 9 (NewCredentials) which matches the Overpass the Hash behavior of e.g Mimikatz's sekurlsa::pth module.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4624\\\" AND winlog.event_data.LogonType:\\\"9\\\" AND winlog.event_data.LogonProcessName:\\\"seclogo\\\" AND winlog.event_data.AuthenticationPackageName:\\\"Negotiate\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

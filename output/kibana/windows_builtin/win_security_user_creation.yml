@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "66b6be3d-55d0-4f47-9855-d69df21740ea",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Local User Creation",
+      "description": "Detects local user creation on windows servers, which shouldn't happen in an Active Directory environment. Apply this Sigma Use Case on your windows server logs and not on your DC logs.",
+      "hits": 0,
+      "columns": [
+        "EventCode",
+        "winlog.event_data.AccountName",
+        "AccountDomain"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4720\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

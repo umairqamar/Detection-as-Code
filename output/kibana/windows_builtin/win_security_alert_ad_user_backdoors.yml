@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "300bac00-e041-4ee2-9c36-e262656a6ecc",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Active Directory User Backdoors",
+      "description": "Detects scenarios where one can control another users or computers account without having to use their credentials.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:\\\"4738\\\" AND (NOT (winlog.event_data.AllowedToDelegateTo:\\\"\\\\-\\\" OR NOT _exists_:winlog.event_data.AllowedToDelegateTo))) OR ((winlog.event_id:\\\"5136\\\" AND winlog.event_data.AttributeLDAPDisplayName:\\\"msDS\\\\-AllowedToDelegateTo\\\") OR (winlog.event_id:\\\"5136\\\" AND winlog.event_data.ObjectClass:\\\"user\\\" AND winlog.event_data.AttributeLDAPDisplayName:\\\"servicePrincipalName\\\") OR (winlog.event_id:\\\"5136\\\" AND winlog.event_data.AttributeLDAPDisplayName:\\\"msDS\\\\-AllowedToActOnBehalfOfOtherIdentity\\\"))))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

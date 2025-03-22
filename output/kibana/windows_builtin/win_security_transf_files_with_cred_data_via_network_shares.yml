@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "910ab938-668b-401b-b08c-b596e80fdca5",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Transferring Files with Credential Data via Network Shares",
+      "description": "Transferring files with well-known filenames (sensitive files with credential data) using network shares",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"5145\\\" AND winlog.event_data.RelativeTargetName.keyword:(*\\\\\\\\mimidrv* OR *\\\\\\\\lsass* OR *\\\\\\\\windows\\\\\\\\minidump\\\\\\\\* OR *\\\\\\\\hiberfil* OR *\\\\\\\\sqldmpr* OR *\\\\\\\\sam* OR *\\\\\\\\ntds.dit* OR *\\\\\\\\security*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

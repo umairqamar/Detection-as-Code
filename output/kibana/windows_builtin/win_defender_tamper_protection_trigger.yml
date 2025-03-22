@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "49e5bc24-8b86-49f1-b743-535f332c2856",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Microsoft Defender Tamper Protection Trigger",
+      "description": "Detects blocked attempts to change any of Defender's settings such as \"Real Time Monitoring\" and \"Behavior Monitoring\"",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-Windows\\\\ Defender\\\\/Operational\\\" AND winlog.event_id:\\\"5013\\\" AND Value.keyword:(*\\\\\\\\Windows\\\\ Defender\\\\\\\\DisableAntiSpyware OR *\\\\\\\\Windows\\\\ Defender\\\\\\\\DisableAntiVirus OR *\\\\\\\\Windows\\\\ Defender\\\\\\\\Scan\\\\\\\\DisableArchiveScanning OR *\\\\\\\\Windows\\\\ Defender\\\\\\\\Scan\\\\\\\\DisableScanningNetworkFiles OR *\\\\\\\\Real\\\\-Time\\\\ Protection\\\\\\\\DisableRealtimeMonitoring OR *\\\\\\\\Real\\\\-Time\\\\ Protection\\\\\\\\DisableBehaviorMonitoring OR *\\\\\\\\Real\\\\-Time\\\\ Protection\\\\\\\\DisableIOAVProtection OR *\\\\\\\\Real\\\\-Time\\\\ Protection\\\\\\\\DisableScriptScanning))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

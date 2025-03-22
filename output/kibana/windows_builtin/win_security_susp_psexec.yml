@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "c462f537-a1e3-41a6-b5fc-b2c2cef9bf82",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious PsExec Execution",
+      "description": "detects execution of psexec or paexec with renamed service name, this rule helps to filter out the noise if psexec is used for legit purposes or if attacker uses a different psexec client other than sysinternal one",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:\\\"5145\\\" AND winlog.event_data.ShareName.keyword:\\\\\\\\\\\\\\\\\\\\*\\\\\\\\IPC$ AND winlog.event_data.RelativeTargetName.keyword:(*\\\\-stdin OR *\\\\-stdout OR *\\\\-stderr)) AND (NOT (winlog.event_data.RelativeTargetName.keyword:PSEXESVC*)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

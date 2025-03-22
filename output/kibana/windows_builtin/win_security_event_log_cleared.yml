@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "a122ac13-daf8-4175-83a2-72c387be339d",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Security Event Log Cleared",
+      "description": "Checks for event id 1102 which indicates the security event log was cleared.",
+      "hits": 0,
+      "columns": [
+        "winlog.event_data.SubjectLogonId",
+        "winlog.event_data.SubjectUserName",
+        "winlog.event_data.SubjectUserSid",
+        "SubjectDomainName"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"1102\\\" AND winlog.provider_name:\\\"Microsoft\\\\-Windows\\\\-Eventlog\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

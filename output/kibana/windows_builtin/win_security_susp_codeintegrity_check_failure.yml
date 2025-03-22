@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "470ec5fa-7b4e-4071-b200-4c753100f49b",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Failed Code Integrity Checks",
+      "description": "Detects code integrity failures such as missing page hashes or corrupted drivers due unauthorized modification. This could be a sign of tampered binaries.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:(\\\"5038\\\" OR \\\"6281\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

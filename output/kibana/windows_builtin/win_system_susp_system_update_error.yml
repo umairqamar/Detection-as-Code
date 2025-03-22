@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "13cfeb75-9e33-4d04-b0f7-ab8faaa95a59",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Windows Update Error",
+      "description": "Windows Update get some error Check if need a 0-days KB",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.provider_name:\\\"Microsoft\\\\-Windows\\\\-WindowsUpdateClient\\\" AND winlog.event_id:(\\\"16\\\" OR \\\"20\\\" OR \\\"24\\\" OR \\\"213\\\" OR \\\"217\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

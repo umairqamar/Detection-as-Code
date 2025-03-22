@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "214e8f95-100a-4e04-bb31-ef6cba8ce07e",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: DCERPC SMB Spoolss Named Pipe",
+      "description": "Detects the use of the spoolss named pipe over SMB. This can be used to trigger the authentication via NTLM of any machine that has the spoolservice enabled.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"5145\\\" AND winlog.event_data.ShareName.keyword:\\\\\\\\\\\\\\\\\\\\*\\\\\\\\IPC$ AND winlog.event_data.RelativeTargetName:\\\"spoolss\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

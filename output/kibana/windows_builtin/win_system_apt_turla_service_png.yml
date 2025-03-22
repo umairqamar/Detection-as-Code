@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1228f8e2-7e79-4dea-b0ad-c91f1d5016c1",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Turla PNG Dropper Service",
+      "description": "This method detects malicious services mentioned in Turla PNG dropper report by NCC Group in November 2018",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.provider_name:\\\"Service\\\\ Control\\\\ Manager\\\" AND winlog.event_id:\\\"7045\\\" AND winlog.event_data.ServiceName:\\\"WerFaultSvc\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

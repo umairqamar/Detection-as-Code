@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1ff315dc-2a3a-4b71-8dde-873818d25d39",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious Task Added by Bitsadmin",
+      "description": "Adversaries may abuse BITS jobs to persistently execute or clean up after malicious payloads.\nWindows Background Intelligent Transfer Service (BITS) is a low-bandwidth, asynchronous file transfer mechanism exposed through [Component Object Model](https://attack.mitre.org/techniques/T1559/001)\n",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-Bits\\\\-Client\\\\/Operational\\\" AND winlog.event_id:\\\"3\\\" AND processPath.keyword:*\\\\\\\\bitsadmin.exe)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

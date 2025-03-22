@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "75edd3fd-7146-48e5-9848-3013d7f0282c",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: DHCP Server Error Failed Loading the CallOut DLL",
+      "description": "This rule detects a DHCP server error in which a specified Callout DLL (in registry) could not be loaded",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.event_id:(\\\"1031\\\" OR \\\"1032\\\" OR \\\"1034\\\") AND winlog.provider_name:\\\"Microsoft\\\\-Windows\\\\-DHCP\\\\-Server\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

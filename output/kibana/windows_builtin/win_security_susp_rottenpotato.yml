@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "16f5d8ca-44bd-47c8-acbe-6fc95a16c12f",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: RottenPotato Like Attack Pattern",
+      "description": "Detects logon events that have characteristics of events generated during an attack with RottenPotato and the like",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4624\\\" AND winlog.event_data.LogonType:\\\"3\\\" AND TargetUserName:\\\"ANONYMOUS\\\\ LOGON\\\" AND winlog.event_data.WorkstationName:\\\"\\\\-\\\" AND winlog.event_data.IpAddress:(\\\"127.0.0.1\\\" OR \\\"\\\\:\\\\:1\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

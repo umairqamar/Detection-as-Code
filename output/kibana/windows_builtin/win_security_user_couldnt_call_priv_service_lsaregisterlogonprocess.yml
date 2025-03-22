@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "6daac7fc-77d1-449a-a71a-e6b4d59a0e54",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: User Couldn't Call a Privileged Service 'LsaRegisterLogonProcess'",
+      "description": "The 'LsaRegisterLogonProcess' function verifies that the application making the function call is a logon process by checking that it has the SeTcbPrivilege privilege set. Possible Rubeus tries to get a handle to LSA.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4673\\\" AND winlog.event_data.Service:\\\"LsaRegisterLogonProcess\\\\(\\\\)\\\" AND Keywords:\\\"0x8010000000000000\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

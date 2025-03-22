@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "b7bc7038-638b-4ffd-880c-292c692209ef",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Certificate Request Export to Exchange Webserver",
+      "description": "Detects a write of an Exchange CSR to an untypical directory or with aspx name suffix which can be used to place a webshell",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"((:\\\"New\\\\-ExchangeCertificate\\\" AND :\\\"\\\\ \\\\-GenerateRequest\\\" AND :\\\"\\\\ \\\\-BinaryEncoded\\\" AND :\\\"\\\\ \\\\-RequestFile\\\") AND \\\\*.keyword:(*\\\\\\\\\\\\\\\\localhost\\\\\\\\C$* OR *\\\\\\\\\\\\\\\\127.0.0.1\\\\\\\\C$* OR *C\\\\:\\\\\\\\inetpub* OR *.aspx*))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

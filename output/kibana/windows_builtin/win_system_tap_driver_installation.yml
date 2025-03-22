@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "8e4cf0e5-aa5d-4dc3-beff-dc26917744a9",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Tap Driver Installation",
+      "description": "Well-known TAP software installation. Possible preparation for data exfiltration using tunnelling techniques",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"System\\\" AND winlog.provider_name:\\\"Service\\\\ Control\\\\ Manager\\\" AND winlog.event_id:\\\"7045\\\" AND winlog.event_data.ImagePath.keyword:*tap0901*)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

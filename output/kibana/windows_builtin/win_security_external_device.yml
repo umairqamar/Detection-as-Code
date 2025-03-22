@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "f69a87ea-955e-4fb4-adb2-bb9fd6685632",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: External Disk Drive Or USB Storage Device",
+      "description": "Detects external diskdrives or plugged in USB devices , EventID 6416 on windows 10 or later",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:\\\"6416\\\" AND winlog.event_data.ClassName:\\\"DiskDrive\\\") OR winlog.event_data.DeviceDescription:\\\"USB\\\\ Mass\\\\ Storage\\\\ Device\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

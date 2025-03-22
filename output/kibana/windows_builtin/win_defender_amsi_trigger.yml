@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "ea9bf0fa-edec-4fb8-8b78-b119f2528186",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Windows Defender AMSI Trigger Detected",
+      "description": "Detects triggering of AMSI by Windows Defender.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-Windows\\\\ Defender\\\\/Operational\\\" AND winlog.event_id:\\\"1116\\\" AND SourceName:\\\"AMSI\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

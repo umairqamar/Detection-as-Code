@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1bbf25b9-8038-4154-a50b-118f2a32be27",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Suspicious Windows ANONYMOUS LOGON Local Account Created",
+      "description": "Detects the creation of suspicious accounts similar to ANONYMOUS LOGON, such as using additional spaces. Created as an covering detection for exclusion of Logon Type 3 from ANONYMOUS LOGON accounts.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4720\\\" AND winlog.event_data.SamAccountName.keyword:*ANONYMOUS* AND winlog.event_data.SamAccountName.keyword:*LOGON*)\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

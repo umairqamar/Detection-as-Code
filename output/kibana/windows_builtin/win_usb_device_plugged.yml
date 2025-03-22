@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1a4bd6e3-4c6e-405d-a9a3-53a116e341d4",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: USB Device Plugged",
+      "description": "Detects plugged/unplugged USB devices",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Microsoft\\\\-Windows\\\\-DriverFrameworks\\\\-UserMode\\\\/Operational\\\" AND winlog.event_id:(\\\"2003\\\" OR \\\"2100\\\" OR \\\"2102\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

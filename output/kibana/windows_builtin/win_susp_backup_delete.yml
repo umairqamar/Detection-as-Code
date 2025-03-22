@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "9703792d-fd9a-456d-a672-ff92efe4806a",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Backup Catalog Deleted",
+      "description": "Detects backup catalog deletions",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Application\\\" AND winlog.event_id:\\\"524\\\" AND winlog.provider_name:\\\"Microsoft\\\\-Windows\\\\-Backup\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

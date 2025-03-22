@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "09570ae5-889e-43ea-aac0-0e1221fb3d95",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: Remove Exported Mailbox from Exchange Webserver",
+      "description": "Detects removal of an exported Exchange mailbox which could be to cover tracks from ProxyShell exploit",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(:\\\"Remove\\\\-MailboxExportRequest\\\" AND :\\\"\\\\ \\\\-Identity\\\\ \\\" AND :\\\"\\\\ \\\\-Confirm\\\\ \\\\\\\"False\\\\\\\"\\\")\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

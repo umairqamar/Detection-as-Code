@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "028c7842-4243-41cd-be6f-12f3cf1a26c7",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: AD Object WriteDAC Access",
+      "description": "Detects WRITE_DAC access to a domain object",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND winlog.event_id:\\\"4662\\\" AND winlog.event_data.ObjectServer:\\\"DS\\\" AND winlog.event_data.AccessMask:\\\"0x40000\\\" AND winlog.event_data.ObjectType:(\\\"19195a5b\\\\-6da0\\\\-11d0\\\\-afd3\\\\-00c04fd930c9\\\" OR \\\"domainDNS\\\"))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

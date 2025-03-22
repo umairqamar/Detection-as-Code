@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "a4c90ea1-2634-4ca0-adbb-35eae169b6fc",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: ETW Logging Disabled In .NET Processes - Registry",
+      "description": "Potential adversaries stopping ETW providers recording loaded .NET assemblies.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND ((winlog.event_id:\\\"4657\\\" AND winlog.event_data.ObjectName.keyword:*\\\\\\\\SOFTWARE\\\\\\\\Microsoft\\\\\\\\.NETFramework AND winlog.event_data.ObjectValueName:\\\"ETWEnabled\\\" AND winlog.event_data.NewValue:\\\"0\\\") OR (winlog.event_id:\\\"4657\\\" AND winlog.event_data.ObjectName.keyword:*\\\\\\\\Environment* AND winlog.event_data.ObjectValueName:(\\\"COMPlus_ETWEnabled\\\" OR \\\"COMPlus_ETWFlags\\\") AND winlog.event_data.NewValue:\\\"0\\\")))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

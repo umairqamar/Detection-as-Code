@@ -1,0 +1,36 @@
+name: Convert Sigma Rules
+run-name: Converting SIGMA rules
+on: push
+jobs:
+  convert-sigma:
+    runs-on: self-hosted
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        output: [elastalert, kibana]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Convert Sigma Rules
+        run:  |
+          pip install -r requirements.txt
+          #pip3 install ruamel.yaml pyyaml requests termcolor
+          python3 ./scripts/convert-rules-all.py sigma/ ${{ matrix.output }} es-qs winlogbeat ./output/${{ matrix.output }}/ windows/builtin windows/sysmon
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Convert Sigma Rules'
+          commit_options: '--no-verify --signoff'
+          repository: .
+          commit_user_name: Github Actions 
+          commit_user_email: no-reply@github.com 
+          commit_author: Author <actions@github.com> 
+          
+          

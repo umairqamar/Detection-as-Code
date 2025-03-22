@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "0b7889b4-5577-4521-a60a-3376ee7f9f7b",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: WMI Persistence",
+      "description": "Detects suspicious WMI event filter and command line event consumer based on WMI and Security Logs.",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(((winlog.event_id:\\\"5861\\\" AND \\\\*.keyword:(*ActiveScriptEventConsumer* OR *CommandLineEventConsumer* OR *CommandLineTemplate*)) OR winlog.event_id:\\\"5859\\\") AND (NOT (Provider:\\\"SCM\\\\ Event\\\\ Provider\\\" AND Query.keyword:select\\\\ *\\\\ from\\\\ MSFT_SCMEventLogEvent AND winlog.event_data.User:\\\"S\\\\-1\\\\-5\\\\-32\\\\-544\\\" AND PossibleCause:\\\"Permanent\\\")))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "b210394c-ba12-4f89-9117-44a2464b9511",
+    "_type": "search",
+    "_source": {
+      "title": "Sigma: SMB Create Remote File Admin Share",
+      "description": "Look for non-system accounts SMB accessing a file with write (0x2) access mask via administrative share (i.e C$).",
+      "hits": 0,
+      "columns": [],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"winlogbeat-*\", \"filter\": [], \"highlight\": {\"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"query\": \"(winlog.channel:\\\"Security\\\" AND (winlog.event_id:\\\"5145\\\" AND winlog.event_data.ShareName.keyword:*C$ AND winlog.event_data.AccessMask:\\\"0x2\\\") AND (NOT (winlog.event_data.SubjectUserName.keyword:*$)))\", \"analyze_wildcard\": true}}}"
+      }
+    }
+  }
+]
